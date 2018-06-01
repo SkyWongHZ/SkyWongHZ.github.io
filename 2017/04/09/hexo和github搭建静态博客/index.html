@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="以前一直断断续续的想整自己的博客，">
+  <meta name="description" content="这是hexo+github配置博客相关记录:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo和github搭建静态博客">
 <meta property="og:url" content="https://skywonghz.github.io/2017/04/09/hexo和github搭建静态博客/index.html">
 <meta property="og:site_name" content="sky&#39;s blog">
-<meta property="og:description" content="以前一直断断续续的想整自己的博客，">
+<meta property="og:description" content="这是hexo+github配置博客相关记录:">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/timg.jpg">
-<meta property="og:updated_time" content="2018-05-26T15:41:44.000Z">
+<meta property="og:updated_time" content="2018-06-01T15:56:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo和github搭建静态博客">
-<meta name="twitter:description" content="以前一直断断续续的想整自己的博客，">
+<meta name="twitter:description" content="这是hexo+github配置博客相关记录:">
 <meta name="twitter:image" content="http://oo4wiq5wc.bkt.clouddn.com/timg.jpg">
 
 
@@ -336,22 +336,6 @@
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-05-26 23:41:44" itemprop="dateModified" datetime="2018-05-26T23:41:44+08:00">2018-05-26</time>
-              
-            
           </span>
 
           
@@ -382,14 +366,24 @@
       
 
       
-        <p>以前一直断断续续的想整自己的博客，<a id="more"></a>一直没有花心思在上面，但是现在我下定决心要走互联网技术方向了,凭什么我不能走的比别人更快，自认为学习能力还可以,凭什么我就不能弯道超车,你要明白你不是一头骡子，不要逆来顺受，要学会思考,在公司的确写业务代码为重，相应的你要思考在写框架,写业务代码的时候你有没有去深入理解思考本质的东西,否则你只是一头骡子，只会随着年纪的增长,对熟悉的那一部分技术会使用，但是无法成为软件工程师,只是一个纯码农,要防止自己处在”温室”里面,你要不断的给自己施加压力，逼迫自己去成长.<br><img src="http://oo4wiq5wc.bkt.clouddn.com/timg.jpg" alt="scboy"><br>配置博客的思路就是基于  hexo+github配置静态博客的方式,相应的可以参考的配置教程如下:<br><a href="http://hifor.net/2015/07/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo-github/" target="_blank" rel="noopener">http://hifor.net/2015/07/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo-github/</a></p>
-<p>在它的教程基础上我配置静态博客的时候要注意以下几点:<br>1端口号4000可能被占用,可以在github中临时改为其他端口 hexo s -p 端口号;<br>2需要配置ssh key;<br>3配置blog/_config.yml文件时中间的空格符号千万不能少(这坑千万要注意);<br>4 blog/_config.yml文件下deplo应该配置成以下形式:<br>   deploy:<br>   type: git<br>   repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/username.github.io.git<br>而不应该照着教程上的方法配置，需要改成以上的代码片段<br>5重装系统后要考虑一个问题，怎么不重新部署一遍hexo，每次重装系统,每次在部署一遍不觉得很麻烦吗?这次重装hexo后完全按教程部署了一遍后,hexo d -g在github上明明有,但是页面上显示不出来,因为你换了config文件下的theme(主题)，被这问题折腾了这么久，sigh!<br>可以参考的博客：<br>石磊的博客 <a href="https://wuhencut.github.io/" target="_blank" rel="noopener">https://wuhencut.github.io/</a> </p>
-<p>hexo毛坯房配置好后装修相关: <a href="http://www.jianshu.com/p/db7e64d86067" target="_blank" rel="noopener">http://www.jianshu.com/p/db7e64d86067</a><br>hexo+七牛云存储  <a href="http://www.jianshu.com/p/ec2c8acf63cd" target="_blank" rel="noopener">http://www.jianshu.com/p/ec2c8acf63cd</a><br>Cafe主题配置<br><a href="https://github.com/giscafer/hexo-theme-cafe/blob/master/_config.yml" target="_blank" rel="noopener">https://github.com/giscafer/hexo-theme-cafe/blob/master/_config.yml</a></p>
-<p>文章中插入图片方式”![图片名][url]”</p>
-<p>hexo指令   更新hexo d  -g<br>           写新博客  hexo new “文章名”<br>hexo  d  -g  服务器 </p>
-<p>hexo  s  -g  本地</p>
-<p>hexo  s  -p 端口号 本地改变端口打开博客</p>
-<p>2017年4月9日  礼拜六凌晨</p>
+        <p>这是hexo+github配置博客相关记录:<a id="more"></a><br><img src="http://oo4wiq5wc.bkt.clouddn.com/timg.jpg" alt="scboy"></p>
+<p>相应的可以参考的配置教程如下:<br><a href="http://hifor.net/2015/07/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo-github/" target="_blank" rel="noopener">http://hifor.net/2015/07/01/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-hexo-github/</a></p>
+<p><em>在它的教程基础上我配置静态博客的时候要注意以下几点:</em></p>
+<ol>
+<li>端口号4000可能被占用,可以在github中临时改为其他端口 hexo s -p 端口号;</li>
+<li>需要配置ssh key;</li>
+<li>配置blog/_config.yml文件时中间的空格符号千万不能少(这坑千万要注意);</li>
+<li><p>blog/_config.yml文件下deplo应该配置成以下形式<font color="red">(而不应该照着教程上的方法配置，需要改成以上的代码片段)</font>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">type: git </span><br><span class="line">repo: git@github.com:username/username.github.io.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重装系统后要考虑一个问题，怎么不重新部署一遍hexo，每次重装系统,每次在部署一遍不觉得很麻烦吗?这次重装hexo后完全按教程部署了一遍后,hexo d -g在github上明明有,但是页面上显示不出来,因为你换了config文件下的theme(主题)，被这问题折腾了这么久，sigh!</p>
+</li>
+</ol>
+<p>可以参考的博客：</p>
+<p>石磊的博客  <a href="https://wuhencut.github.io/" target="_blank" rel="noopener">https://wuhencut.github.io/</a><br>hexo毛坯房配置好后装修相关: <a href="http://www.jianshu.com/p/db7e64d86067" target="_blank" rel="noopener">http://www.jianshu.com/p/db7e64d86067</a><br>hexo+七牛云存储  <a href="http://www.jianshu.com/p/ec2c8acf63cd" target="_blank" rel="noopener">http://www.jianshu.com/p/ec2c8acf63cd</a><br>Cafe主题配置<br><a href="https://github.com/giscafer/hexo-theme-cafe/blob/master/_config.yml" target="_blank" rel="noopener">https://github.com/giscafer/hexo-theme-cafe/blob/master/_config.yml</a></p>
+<p><strong>mardown语法插入图片:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片名][url]</span><br></pre></td></tr></table></figure></p>
+<p><strong>hexo常用指令</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo  d  -g  更新博客到服务器</span><br><span class="line"></span><br><span class="line">hexo new &quot;文章名&quot;</span><br><span class="line"></span><br><span class="line">hexo  s  -g  本地预览博客</span><br><span class="line"></span><br><span class="line">hexo  s  -p 端口号 本地改变端口打开博客</span><br></pre></td></tr></table></figure></p>
+<p>2017年4月9日  礼拜六凌晨写于杭州萧山</p>
 
       
     </div>
@@ -417,14 +411,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/02/git指令学习/" rel="next" title="git指令学习">
+                <i class="fa fa-chevron-left"></i> git指令学习
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/13/移动端自适应方案/" rel="prev" title="移动端页面自适应方案小结">
-                移动端页面自适应方案小结 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/15/ionic混合开发（4.10-4.16）工作小结/" rel="prev" title="ionic混合开发（4.10-4.16）工作小结">
+                ionic混合开发（4.10-4.16）工作小结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -494,7 +492,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

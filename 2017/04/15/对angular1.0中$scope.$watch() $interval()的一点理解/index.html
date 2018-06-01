@@ -108,27 +108,24 @@
 
 
 
-  <meta name="description" content="v-link已经被router-link替换">
+  <meta name="description" content="对angular几个api的理解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue笔记小结">
-<meta property="og:url" content="https://skywonghz.github.io/2018/05/31/vue笔记小结/index.html">
+<meta property="og:title" content="对angular1.0中$scope.$watch() $interval()的一点理解">
+<meta property="og:url" content="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/index.html">
 <meta property="og:site_name" content="sky&#39;s blog">
-<meta property="og:description" content="v-link已经被router-link替换">
+<meta property="og:description" content="对angular几个api的理解">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2041409-201a68bf1d805b91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-01T16:33:21.000Z">
+<meta property="og:updated_time" content="2018-06-01T16:23:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue笔记小结">
-<meta name="twitter:description" content="v-link已经被router-link替换">
-<meta name="twitter:image" content="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png">
+<meta name="twitter:title" content="对angular1.0中$scope.$watch() $interval()的一点理解">
+<meta name="twitter:description" content="对angular几个api的理解">
 
 
 
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2018/05/31/vue笔记小结/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/"/>
 
 
 
@@ -138,7 +135,7 @@
   };
 </script>
 
-  <title>vue笔记小结 | sky's blog</title>
+  <title>对angular1.0中$scope.$watch() $interval()的一点理解 | sky's blog</title>
   
 
 
@@ -291,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2018/05/31/vue笔记小结/">
+    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sky Wang">
@@ -308,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vue笔记小结
+          <h1 class="post-title" itemprop="name headline">对angular1.0中$scope.$watch() $interval()的一点理解
               
             
           </h1>
@@ -333,7 +330,7 @@
                 
               
 
-              <time title="创建时间：2018-05-31 11:15:16" itemprop="dateCreated datePublished" datetime="2018-05-31T11:15:16+08:00">2018-05-31</time>
+              <time title="创建时间：2017-04-15 19:35:31" itemprop="dateCreated datePublished" datetime="2017-04-15T19:35:31+08:00">2017-04-15</time>
             
 
             
@@ -367,32 +364,19 @@
       
 
       
-        <p>v-link已经被router-link替换<br><a id="more"></a></p>
-<p>router-link写法:</p>
-<p><rouer-link to="/about">About&lt;/route”r-link&gt;</rouer-link></p>
-<p>1.vue项目部署在webstorm中，第一个遇到的问题是，webstorm卡住了，没错，大卡特卡。原因是webstorm在后台检索索引，而我们的vue项目中node_modules下包会很多，所以会很卡，解决方式是让webstorm停止对node_modules检索，右键node_modules，选择Mark Directory As为Excluded，卡顿消失。</p>
-<p><img src="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png" alt="此处输入图片的描述"></p>
-<p>  以及因为使用IDE打开Vue项目会给node_modules创建索引，而node_modules文件庞大，导致创建索引过慢，于是笔者提供的思路就是将node_modules忽略，不为其创建索引。<img src="//upload-images.jianshu.io/upload_images/2041409-201a68bf1d805b91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
-<p>  做网易云音乐项目时遇到:<br>  缺少less模块</p>
-<p>先cnpm  install  less  –save-dev<br>再:  {test: /.less$/ ,<br>        loader: ‘style!css!less’},</p>
-<p>坑二:</p>
-<p>全部加载:<br>import MuseUI from ‘muse-ui’<br>import ‘muse-ui/dist/muse-ui.css’<br>Vue.use(MuseUI)</p>
-<p>就少了最后一句话,坑了我一个多小时</p>
-<p>muse主题背景一开始是蓝色的,需要自定义主题背景颜色,assets文件下的theme.less就是用来自定义主题的,<br>定义好后需要在需要的vue文件下的css中引入,用@import的方式引入</p>
-<p>路由跳转:<br>声明式：<router-link :to="..."><br>编程式：router.push()<br>展示示例:this.$router.push({path: ‘/home’})<br>         <router-link to="popular"></router-link></router-link></p>
-<p>require与import区别</p>
-<p>require/exports是commonJS语法;import/export是es6模块语法</p>
-<p>v-on用@简写   v-bind用:来简写</p>
-<p>vue里面data,methods的写法<br>export default<br>  data(){</p>
-<p>  },</p>
-<p>  methods:{</p>
-<p>  }<br>}</p>
-<p>keep-alive:<br>优点:用<keep-alive>包含<router-view>实现页面缓存，加速页面加载<br>缺点:开启路由外面的一层包裹keep-alive在用生命周期相关钩子函数时会有坑,以后碰到这个的时候注意</router-view></keep-alive></p>
-<p>vue2相对于vue1的区别:加入了虚拟Dom.</p>
-<p>vue懒加载用法?</p>
-<p>less语言写法:&amp;可以替代父级元素做简写  如a:hover写成&amp;：hover  div&gt;p写成&amp;&gt;p</p>
-<p>vue2废弃掉了内置过滤器,需要自己写过滤器,vue2.0里 管道符‘|’只能用在mousetache和v-bind中</p>
-<p>:key一般就在v-for循环时用到,个人理解是可写可不写,文档写的太官方,没看懂它的意思<br>:key=”item.id”</p>
+        <p>对angular几个api的理解<a id="more"></a><br>今天在图书馆看程序的时候,对$interval(),$watch()有了进一步的理解<!-- more -->.<br>$watch()监听函数的最简单用法就是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$scope.$watch(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(a,b);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这里a,b是形参，可以写任意参数，a是新值，b是旧值；在html中绑定一个数据就可以看变化了</p>
+<p>$interval()就是用来做计数器的,最简单的用法就是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line">$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num++;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br><span class="line">ps:<span class="number">1000</span>代表的是毫秒数，可以自定义;</span><br></pre></td></tr></table></figure></p>
+<p>这样就实现计数功能,如果想停止计数功能的话就用$interval.cancel(a),a是定义的参数</p>
+<p>所以上面的代码想让它在15s的时候停下来,就如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">15</span>)&#123;</span><br><span class="line">        $interval.cancel(timer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></p>
+<p>在angular中做的小demo，上面显示名字，下面当数字变为10以上时，名字的内容改变：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"$parent.car"</span>&gt;</span></span><br><span class="line">    改变次数：&#123;&#123;$parent.count&#125;&#125;--&#123;&#123;$parent.car&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<font color="red"> 至于有些地方为什么要绑定到父元素parent，这问题还没有想清楚，以后再进一步深究</font>
+
+
+
+
+<p>controller里面的代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$scope.car=<span class="string">"张三"</span>;</span><br><span class="line">$scope.count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;         </span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">15</span>)&#123;</span><br><span class="line">        $interval.cancel(timer);</span><br><span class="line">    &#125;</span><br><span class="line">    $scope.count=num;</span><br><span class="line">&#125;,<span class="number">1000</span>);    </span><br><span class="line">$scope.$watch(<span class="string">'count'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;       </span><br><span class="line">    ($scope.count&gt;<span class="number">10</span>)?($scope.car=<span class="string">"变化"</span>):($scope.car=<span class="string">"张三"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这就是现在掌握的$watch()和$interval()的用法.</p>
 
       
     </div>
@@ -420,8 +404,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/15/parseInt  parseFloat  number比较/" rel="next" title="parseInt  parseFloat区别">
-                <i class="fa fa-chevron-left"></i> parseInt  parseFloat区别
+              <a href="/2017/04/15/ionic混合开发（4月上旬小结）/" rel="next" title="ionic混合开发（4月上旬小结）">
+                <i class="fa fa-chevron-left"></i> ionic混合开发（4月上旬小结）
               </a>
             
           </div>
@@ -430,8 +414,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/31/Vue笔记小结2/" rel="prev" title="vue笔记小结2">
-                vue笔记小结2 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/20/ionic混合开发第四周工作小结(4.17-22)/" rel="prev" title="ionic混合开发第四周工作小结(4.17-22)">
+                ionic混合开发第四周工作小结(4.17-22) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

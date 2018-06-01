@@ -108,27 +108,30 @@
 
 
 
-  <meta name="description" content="v-link已经被router-link替换">
+  <meta name="description" content="今天我突然发现自己之前纠结了很久的问题，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue笔记小结">
-<meta property="og:url" content="https://skywonghz.github.io/2018/05/31/vue笔记小结/index.html">
+<meta property="og:title" content="ionic混合开发（4月上旬小结）">
+<meta property="og:url" content="https://skywonghz.github.io/2017/04/15/ionic混合开发（4月上旬小结）/index.html">
 <meta property="og:site_name" content="sky&#39;s blog">
-<meta property="og:description" content="v-link已经被router-link替换">
+<meta property="og:description" content="今天我突然发现自己之前纠结了很久的问题，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2041409-201a68bf1d805b91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-01T16:33:21.000Z">
+<meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_160122.png">
+<meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/1.png">
+<meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/2.png">
+<meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_162150.png">
+<meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_162205.png">
+<meta property="og:updated_time" content="2018-06-01T16:23:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue笔记小结">
-<meta name="twitter:description" content="v-link已经被router-link替换">
-<meta name="twitter:image" content="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png">
+<meta name="twitter:title" content="ionic混合开发（4月上旬小结）">
+<meta name="twitter:description" content="今天我突然发现自己之前纠结了很久的问题，">
+<meta name="twitter:image" content="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_160122.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2018/05/31/vue笔记小结/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2017/04/15/ionic混合开发（4月上旬小结）/"/>
 
 
 
@@ -138,7 +141,7 @@
   };
 </script>
 
-  <title>vue笔记小结 | sky's blog</title>
+  <title>ionic混合开发（4月上旬小结） | sky's blog</title>
   
 
 
@@ -291,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2018/05/31/vue笔记小结/">
+    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2017/04/15/ionic混合开发（4月上旬小结）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sky Wang">
@@ -308,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vue笔记小结
+          <h1 class="post-title" itemprop="name headline">ionic混合开发（4月上旬小结）
               
             
           </h1>
@@ -333,7 +336,7 @@
                 
               
 
-              <time title="创建时间：2018-05-31 11:15:16" itemprop="dateCreated datePublished" datetime="2018-05-31T11:15:16+08:00">2018-05-31</time>
+              <time title="创建时间：2017-04-15 15:44:17" itemprop="dateCreated datePublished" datetime="2017-04-15T15:44:17+08:00">2017-04-15</time>
             
 
             
@@ -367,32 +370,16 @@
       
 
       
-        <p>v-link已经被router-link替换<br><a id="more"></a></p>
-<p>router-link写法:</p>
-<p><rouer-link to="/about">About&lt;/route”r-link&gt;</rouer-link></p>
-<p>1.vue项目部署在webstorm中，第一个遇到的问题是，webstorm卡住了，没错，大卡特卡。原因是webstorm在后台检索索引，而我们的vue项目中node_modules下包会很多，所以会很卡，解决方式是让webstorm停止对node_modules检索，右键node_modules，选择Mark Directory As为Excluded，卡顿消失。</p>
-<p><img src="http://img.debugrun.com/pic/2017/3/28/f6ffc7075da770a335c267eb25895cbf.png" alt="此处输入图片的描述"></p>
-<p>  以及因为使用IDE打开Vue项目会给node_modules创建索引，而node_modules文件庞大，导致创建索引过慢，于是笔者提供的思路就是将node_modules忽略，不为其创建索引。<img src="//upload-images.jianshu.io/upload_images/2041409-201a68bf1d805b91.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="此处输入图片的描述"></p>
-<p>  做网易云音乐项目时遇到:<br>  缺少less模块</p>
-<p>先cnpm  install  less  –save-dev<br>再:  {test: /.less$/ ,<br>        loader: ‘style!css!less’},</p>
-<p>坑二:</p>
-<p>全部加载:<br>import MuseUI from ‘muse-ui’<br>import ‘muse-ui/dist/muse-ui.css’<br>Vue.use(MuseUI)</p>
-<p>就少了最后一句话,坑了我一个多小时</p>
-<p>muse主题背景一开始是蓝色的,需要自定义主题背景颜色,assets文件下的theme.less就是用来自定义主题的,<br>定义好后需要在需要的vue文件下的css中引入,用@import的方式引入</p>
-<p>路由跳转:<br>声明式：<router-link :to="..."><br>编程式：router.push()<br>展示示例:this.$router.push({path: ‘/home’})<br>         <router-link to="popular"></router-link></router-link></p>
-<p>require与import区别</p>
-<p>require/exports是commonJS语法;import/export是es6模块语法</p>
-<p>v-on用@简写   v-bind用:来简写</p>
-<p>vue里面data,methods的写法<br>export default<br>  data(){</p>
-<p>  },</p>
-<p>  methods:{</p>
-<p>  }<br>}</p>
-<p>keep-alive:<br>优点:用<keep-alive>包含<router-view>实现页面缓存，加速页面加载<br>缺点:开启路由外面的一层包裹keep-alive在用生命周期相关钩子函数时会有坑,以后碰到这个的时候注意</router-view></keep-alive></p>
-<p>vue2相对于vue1的区别:加入了虚拟Dom.</p>
-<p>vue懒加载用法?</p>
-<p>less语言写法:&amp;可以替代父级元素做简写  如a:hover写成&amp;：hover  div&gt;p写成&amp;&gt;p</p>
-<p>vue2废弃掉了内置过滤器,需要自己写过滤器,vue2.0里 管道符‘|’只能用在mousetache和v-bind中</p>
-<p>:key一般就在v-for循环时用到,个人理解是可写可不写,文档写的太官方,没看懂它的意思<br>:key=”item.id”</p>
+        <p>今天我突然发现自己之前纠结了很久的问题，<a id="more"></a>原因所在竟是因为后台给我的json数据格式有问题，所以我始终无法根据state的状态来判断逻辑的有无,实际上到了现在这份上,你让我写个if else嵌套判断我完全能很easy的写的出来,但是对业务认知不够,通过这件事我不怪任何人，说白了是自己项目经验不够,所以被批评认栽也自认倒霉,接着我要做的就是去解决这个bug，并且能在下次碰到类似的问题的时候吸取教训.</p>
+<p>前两个礼拜主要做了下面这几件事:<br>1做了获取验证码功能;<br>2根据token有无发起jsonp请求,token有的情况下是否失效来判断不同页面的跳转情况;<br>3设置页面 “退出” “确定”相关模态框<br><figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">$scope.code=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>($scope.mobile.length!=<span class="number">11</span>||!<span class="regexp">/^1[34578]\d&#123;9&#125;$/i</span>.test($scope.mobile))&#123;</span><br><span class="line">		$scope.showAlert(<span class="string">'提示'</span>, <span class="string">'请输入正确的手机号码'</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		$http.jsonp(serverUrl+<span class="string">'/get/register/phoneCode?callback=JSON_CALLBACK&amp;mobile='</span>+$scope.mobile)</span><br><span class="line">    	.success(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;  </span><br><span class="line">    		 <span class="built_in">console</span>.log(result);</span><br><span class="line">                    <span class="keyword">if</span>(result.ok)&#123;</span><br><span class="line">                    	<span class="keyword">var</span> num = <span class="number">60</span>;</span><br><span class="line">                        <span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                           num--;</span><br><span class="line">                           $scope.disabled_code_button=<span class="literal">true</span>;</span><br><span class="line">                           $scope.sendTxt=<span class="string">'已发送('</span> +num+ <span class="string">')'</span>;</span><br><span class="line">                           <span class="keyword">if</span>(num===<span class="number">0</span>)&#123;</span><br><span class="line">                              $interval.cancel(timer);</span><br><span class="line">                              $scope.sendTxt=<span class="string">'发送验证码'</span>;</span><br><span class="line">                              $scope.disabled_code_button=<span class="literal">false</span>;</span><br><span class="line">                           &#125;</span><br><span class="line">                        &#125;,<span class="number">1000</span>)</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    	<span class="keyword">try</span> &#123;</span><br><span class="line">    						$cordovaProgress.hide();</span><br><span class="line">    					&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    						<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">    					&#125;</span><br><span class="line">    					<span class="built_in">console</span>.log(result.msg);</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">    						$cordovaToast.show(result.msg, <span class="string">'long'</span>, <span class="string">'center'</span>);</span><br><span class="line">    					&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    						<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">    					&#125;</span><br><span class="line">                        <span class="built_in">console</span>.log(result.msg);</span><br><span class="line">                    &#125;</span><br><span class="line">                   </span><br><span class="line">                &#125;)</span><br><span class="line">        .error(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        	<span class="built_in">console</span>.log(data);</span><br><span class="line">        	<span class="keyword">try</span> &#123;</span><br><span class="line">	$cordovaProgress.hide();</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">	<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">&#125;</span><br><span class="line">$scope.disabled_button=<span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">	$cordovaToast.show(<span class="string">'验证码验证失败！'</span>, <span class="string">'long'</span>, <span class="string">'center'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">	<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">	alert(<span class="string">'验证码验证失败！'</span>);</span><br><span class="line">&#125;</span><br><span class="line">        &#125;)</span><br><span class="line">	&#125;    	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_160122.png" alt="发送验证码模块"></p>
+<p> 上述代码主要是做了验证功能码模块,倒计时60s,并在点击时防止对方恶意点击,通过ng-show让按钮失效,”发送验证码”是通过单向数ng-bind绑定在button上的</p>
+<p>  第二点根据现在的做法我一开始是用了二次三目运算符,但是导致代码的可读性不高,从这点上我要去掌握：<br>  1  if else与switch case语句的用法;<br>  2看一遍代码规范,养成良好的写代码的习惯;<br>  3jsonp请求的写法不是太熟练，去练到自己熟练为止;<br>  <img src="http://oo4wiq5wc.bkt.clouddn.com/1.png" alt="模态框相关样式"></p>
+<p><img src="http://oo4wiq5wc.bkt.clouddn.com/2.png" alt="模态框html"></p>
+<p><img src="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_162150.png" alt=""></p>
+<p><img src="http://oo4wiq5wc.bkt.clouddn.com/2017-04-15_162205.png" alt=""></p>
+<p>  模态框的思路可以照着这边来做,做整理,以后用到这功能的时候尽量做到代码的复用.</p>
+<p>  <strong>回去之后需要掌握的点:</strong><br>  1  if else与switch case语句的用法;<br>  2看一遍代码规范,养成良好的写代码的习惯;<br>  3jsonp跨域请求的写法不是太熟练，去练到自己熟练为止;</p>
 
       
     </div>
@@ -420,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/15/parseInt  parseFloat  number比较/" rel="next" title="parseInt  parseFloat区别">
-                <i class="fa fa-chevron-left"></i> parseInt  parseFloat区别
+              <a href="/2017/04/15/ionic混合开发（4.10-4.16）工作小结/" rel="next" title="ionic混合开发（4.10-4.16）工作小结">
+                <i class="fa fa-chevron-left"></i> ionic混合开发（4.10-4.16）工作小结
               </a>
             
           </div>
@@ -430,8 +417,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/31/Vue笔记小结2/" rel="prev" title="vue笔记小结2">
-                vue笔记小结2 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/" rel="prev" title="对angular1.0中$scope.$watch() $interval()的一点理解">
+                对angular1.0中$scope.$watch() $interval()的一点理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
