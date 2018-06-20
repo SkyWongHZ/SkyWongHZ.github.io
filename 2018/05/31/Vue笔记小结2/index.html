@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="sky&#39;s blog">
 <meta property="og:description" content="缺少less模块:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-09T14:17:48.000Z">
+<meta property="og:updated_time" content="2018-06-02T05:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue笔记小结2">
 <meta name="twitter:description" content="缺少less模块:">
@@ -390,6 +390,22 @@
 <p>a(){}与a:function(){}区别   还有function a(){}用法<br>typescript是什么鬼?</p>
 <p>vue路由传参<br>比如我想把A页面的参数id传到B页面中去,路由分别是’/a’,’/b’，首先B页面必须有一个路由名字name,如nameB,其次在B页面path后面加上’/b/:id’,然后在A页面配置路由跳转,<router-link :to="{name:nameB,params:{id:id}}">跳转到B页面,<br>在B页面想接受到A页面的参数即可用this.$route.params.id</router-link></p>
 <p>控制前进后退步数  this.$router.go(n)  n是前进后退的步数</p>
+<p>1假如用vue-cli如何与再不依赖后台环境下,用axios与后台进行ajax交互</p>
+<p>vuex使用原则:<br>只有 mutation 可以改變 state。<br>非同步的事件應該在 action 處理。<br>mutation 只能處理同步事件。</p>
+<p>actions里面放异步存取的方法</p>
+<p>不同于mutations使用commit方法，actions使用dispatch方法<br>this.$store.dispatch(‘incrementAsync’)</p>
+<p>this.$store.</p>
+<p>mapGetters辅助函数仅仅是将store中的getters映射到局部计算属性</p>
+<p>用v-for循环的时候,有时候虽然会渲染出来,但是会有警告类型错误,只需要在父元素上做个v-if判断,判断父元素是否为空</p>
+<p>如：vue代码为:</p>
+<pre><code>&lt;p class=&quot;author&quot; &gt;
+    &lt;mu-avatar :src=&quot;playlist.creator.avatarUrl&quot; slot=&quot;left&quot;  :size=&quot;30&quot; :iconSize=&quot;20&quot;/&gt;
+    &lt;span&gt;{{playlist.creator.nickname}}&lt;/span&gt;
+&lt;/p&gt;
+</code></pre><p>[Vue warn]: Error in render function: “TypeError: Cannot read property ‘avatarUrl’ of undefined”</p>
+<p>解决方法:在class为’autor’的p元素上加上v-if=”playlist.creator”</p>
+<p>vue生命周期里面的ready()一般什么情况下该用?</p>
+<p>父组件向子组件传参，用props，</p>
 
       
     </div>
@@ -426,6 +442,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/20/React-Native入门相关/" rel="prev" title="React Native入门相关 ">
+                React Native入门相关  <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -494,7 +514,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

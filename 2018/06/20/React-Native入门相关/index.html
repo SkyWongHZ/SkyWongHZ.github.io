@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="对angular几个api的理解">
+  <meta name="description" content="下一阶段的业余计划:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对angular1.0中$scope.$watch() $interval()的一点理解">
-<meta property="og:url" content="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/index.html">
+<meta property="og:title" content="React Native入门相关 ">
+<meta property="og:url" content="https://skywonghz.github.io/2018/06/20/React-Native入门相关/index.html">
 <meta property="og:site_name" content="sky&#39;s blog">
-<meta property="og:description" content="对angular几个api的理解">
+<meta property="og:description" content="下一阶段的业余计划:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-01T16:23:31.000Z">
+<meta property="og:updated_time" content="2018-06-20T14:41:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对angular1.0中$scope.$watch() $interval()的一点理解">
-<meta name="twitter:description" content="对angular几个api的理解">
+<meta name="twitter:title" content="React Native入门相关 ">
+<meta name="twitter:description" content="下一阶段的业余计划:">
 
 
 
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2018/06/20/React-Native入门相关/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>对angular1.0中$scope.$watch() $interval()的一点理解 | sky's blog</title>
+  <title>React Native入门相关  | sky's blog</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/">
+    <link itemprop="mainEntityOfPage" href="https://skywonghz.github.io/2018/06/20/React-Native入门相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sky Wang">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">对angular1.0中$scope.$watch() $interval()的一点理解
+          <h1 class="post-title" itemprop="name headline">React Native入门相关 
               
             
           </h1>
@@ -330,7 +330,7 @@
                 
               
 
-              <time title="创建时间：2017-04-15 19:35:31" itemprop="dateCreated datePublished" datetime="2017-04-15T19:35:31+08:00">2017-04-15</time>
+              <time title="创建时间：2018-06-20 22:37:42" itemprop="dateCreated datePublished" datetime="2018-06-20T22:37:42+08:00">2018-06-20</time>
             
 
             
@@ -364,19 +364,7 @@
       
 
       
-        <p>对angular几个api的理解<a id="more"></a><br>今天在图书馆看程序的时候,对$interval(),$watch()有了进一步的理解<!-- more -->.<br>$watch()监听函数的最简单用法就是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$scope.$watch(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(a,b);</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure></p>
-<p>这里a,b是形参，可以写任意参数，a是新值，b是旧值；在html中绑定一个数据就可以看变化了</p>
-<p>$interval()就是用来做计数器的,最简单的用法就是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line">$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num++;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br><span class="line">ps:<span class="number">1000</span>代表的是毫秒数，可以自定义;</span><br></pre></td></tr></table></figure></p>
-<p>这样就实现计数功能,如果想停止计数功能的话就用$interval.cancel(a),a是定义的参数</p>
-<p>所以上面的代码想让它在15s的时候停下来,就如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">15</span>)&#123;</span><br><span class="line">        $interval.cancel(timer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></p>
-<p>在angular中做的小demo，上面显示名字，下面当数字变为10以上时，名字的内容改变：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"$parent.car"</span>&gt;</span></span><br><span class="line">    改变次数：&#123;&#123;$parent.count&#125;&#125;--&#123;&#123;$parent.car&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<font color="red"> 至于有些地方为什么要绑定到父元素parent，这问题还没有想清楚，以后再进一步深究</font>
-
-
-
-
-<p>controller里面的代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$scope.car=<span class="string">"张三"</span>;</span><br><span class="line">$scope.count=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> num=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;         </span><br><span class="line">    num++;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">15</span>)&#123;</span><br><span class="line">        $interval.cancel(timer);</span><br><span class="line">    &#125;</span><br><span class="line">    $scope.count=num;</span><br><span class="line">&#125;,<span class="number">1000</span>);    </span><br><span class="line">$scope.$watch(<span class="string">'count'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;       </span><br><span class="line">    ($scope.count&gt;<span class="number">10</span>)?($scope.car=<span class="string">"变化"</span>):($scope.car=<span class="string">"张三"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>这就是现在掌握的$watch()和$interval()的用法.</p>
+        <p>下一阶段的业余计划:<br><a id="more"></a><br>这段时间给自己定几个目标:<br>1参与公司一个项目的重构，认领到自己相应的模块,尽力去完成;<br>2学习rn相关，把自己很久以前的ionic项目重构成rn项目;<br>3学习koa2,尝试着从最开始的注册,登录开始自己搭建一个博客出来；</p>
 
       
     </div>
@@ -404,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/15/ionic混合开发（4.10-4.16）工作小结/" rel="next" title="ionic混合开发（4.10-4.16）工作小结">
-                <i class="fa fa-chevron-left"></i> ionic混合开发（4.10-4.16）工作小结
+              <a href="/2018/05/31/Vue笔记小结2/" rel="next" title="vue笔记小结2">
+                <i class="fa fa-chevron-left"></i> vue笔记小结2
               </a>
             
           </div>
@@ -413,10 +401,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/20/ionic混合开发第四周工作小结(4.17-22)/" rel="prev" title="ionic混合开发第四周工作小结(4.17-22)">
-                ionic混合开发第四周工作小结(4.17-22) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
