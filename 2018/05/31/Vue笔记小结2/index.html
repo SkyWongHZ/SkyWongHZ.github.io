@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,9 +56,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2018/05/31/Vue笔记小结2/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2018/05/31/Vue笔记小结2/">
 
 
 
@@ -221,7 +221,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -229,7 +229,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -237,7 +237,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -364,7 +364,9 @@
       
 
       
-        <p><strong>缺少less模块:</strong><br><a id="more"></a><br>先npm install –save-dev less<br>npm install –save-dev file-loader<br>再:  {test: /.less$/ ,<br>        loader: ‘style!css!less’},</p>
+        <p><strong>缺少less模块:</strong></p>
+<a id="more"></a>
+<p>先npm install –save-dev less<br>npm install –save-dev file-loader<br>再:  {test: /.less$/ ,<br>        loader: ‘style!css!less’},</p>
 <p><strong>坑二:加载muse-ui样式组件时:</strong><br>import MuseUI from ‘muse-ui’<br>import ‘muse-ui/dist/muse-ui.css’<br>Vue.use(MuseUI)<br>就少了最后一句话,坑了我一个多小时</p>
 <p>muse主题背景一开始是蓝色的,需要自定义主题背景颜色,assets文件下的theme.less就是用来自定义主题的,定义好后需要在需要的vue文件下的css中引入,用@import的方式引入</p>
 <p><strong>路由跳转:</strong><br>声明式：<router-link :to="..."><br>编程式：router.push()<br>展示示例:this.$router.push({path: ‘/home’})<br>         <router-link to="popular"><br>         <router-link :to="name:popular"></router-link></router-link></router-link></p>
@@ -386,7 +388,7 @@
 <p>es6语法恶补;<br>vue滚动加载更多;<br>vue路由传参</p>
 <p>去除缓存的方法:<br>?param=Math.random()</p>
 <p>eslint语法设置的过于恶心,以后看到有eslint设置的直接在webpack中注释掉相关代码.</p>
-<p><strong><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></strong>9.13</p>
+<p><strong><strong><strong><strong><strong><strong>****</strong></strong></strong></strong></strong></strong>9.13</p>
 <p>a(){}与a:function(){}区别   还有function a(){}用法<br>typescript是什么鬼?</p>
 <p>vue路由传参<br>比如我想把A页面的参数id传到B页面中去,路由分别是’/a’,’/b’，首先B页面必须有一个路由名字name,如nameB,其次在B页面path后面加上’/b/:id’,然后在A页面配置路由跳转,<router-link :to="{name:nameB,params:{id:id}}">跳转到B页面,<br>在B页面想接受到A页面的参数即可用this.$route.params.id</router-link></p>
 <p>控制前进后退步数  this.$router.go(n)  n是前进后退的步数</p>
@@ -401,8 +403,7 @@
 <pre><code>&lt;p class=&quot;author&quot; &gt;
     &lt;mu-avatar :src=&quot;playlist.creator.avatarUrl&quot; slot=&quot;left&quot;  :size=&quot;30&quot; :iconSize=&quot;20&quot;/&gt;
     &lt;span&gt;{{playlist.creator.nickname}}&lt;/span&gt;
-&lt;/p&gt;
-</code></pre><p>[Vue warn]: Error in render function: “TypeError: Cannot read property ‘avatarUrl’ of undefined”</p>
+&lt;/p&gt;</code></pre><p>[Vue warn]: Error in render function: “TypeError: Cannot read property ‘avatarUrl’ of undefined”</p>
 <p>解决方法:在class为’autor’的p元素上加上v-if=”playlist.creator”</p>
 <p>vue生命周期里面的ready()一般什么情况下该用?</p>
 <p>父组件向子组件传参，用props，</p>
@@ -499,9 +500,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg"
-                alt="Sky Wang" />
+              <img class="site-author-image" itemprop="image" src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg" alt="Sky Wang">
             
               <p class="site-author-name" itemprop="name">Sky Wang</p>
               <p class="site-description motion-element" itemprop="description">Ars longa, vita brevis, occasio praeceps, experimentum periculosum, iudicium difficile</p>
@@ -572,7 +571,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -586,7 +585,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 

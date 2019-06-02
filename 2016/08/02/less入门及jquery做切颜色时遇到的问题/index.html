@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,9 +56,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2016/08/02/less入门及jquery做切颜色时遇到的问题/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2016/08/02/less入门及jquery做切颜色时遇到的问题/">
 
 
 
@@ -221,7 +221,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -229,7 +229,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -237,7 +237,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -364,10 +364,14 @@
       
 
       
-        <p>less用文件引入的方式时,<a id="more"></a>需要把link里面的ref设置为”stylesheet/less”，<br>参考代码链接如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel="stylesheet/less" href="less/test.less"&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>less用文件引入的方式时,<a id="more"></a>需要把link里面的ref设置为”stylesheet/less”，<br>参考代码链接如下 </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel="stylesheet/less" href="less/test.less"&gt;</span><br></pre></td></tr></table></figure>
+
 <p>还要用到less.js这文件,也需要在script中引入;</p>
 <p>css中的伪类选择器如:focus，：hover如果想把他们和之前的元素标签,如a标签联系起来的话,需要用到”&amp;”;</p>
-<p><strong>jquery切换颜色不是以颜色hex码形式展示,而是rgb形式:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="keyword">this</span>).css(<span class="string">'color'</span>)===<span class="string">'rgb(0, 128, 0)'</span>)&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'rgb(255, 255, 255)'</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'rgb(0, 128, 0)'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>jquery切换颜色不是以颜色hex码形式展示,而是rgb形式:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="keyword">this</span>).css(<span class="string">'color'</span>)===<span class="string">'rgb(0, 128, 0)'</span>)&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'rgb(255, 255, 255)'</span>)</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).css(<span class="string">'color'</span>,<span class="string">'rgb(0, 128, 0)'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>jQuery中把颜色代码console.log出来是rgb形式的,并不是6位的颜色代码形式.</p>
 
       
@@ -462,9 +466,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg"
-                alt="Sky Wang" />
+              <img class="site-author-image" itemprop="image" src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg" alt="Sky Wang">
             
               <p class="site-author-name" itemprop="name">Sky Wang</p>
               <p class="site-description motion-element" itemprop="description">Ars longa, vita brevis, occasio praeceps, experimentum periculosum, iudicium difficile</p>
@@ -535,7 +537,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -549,7 +551,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 

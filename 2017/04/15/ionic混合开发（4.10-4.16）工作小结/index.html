@@ -15,10 +15,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,9 +56,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -118,7 +118,7 @@
 <meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg">
 <meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/%E6%AD%A3%E5%9C%A8%E9%AA%91%E8%A1%8C%20%E4%B8%8B%E6%8B%89.jpg">
 <meta property="og:image" content="http://oo4wiq5wc.bkt.clouddn.com/%E6%AD%A3%E5%9C%A8%E9%AA%91%E8%A1%8C.jpg">
-<meta property="og:updated_time" content="2018-11-05T15:08:10.708Z">
+<meta property="og:updated_time" content="2018-11-05T15:08:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ionic混合开发（4.10-4.16）工作小结">
 <meta name="twitter:description" content="回想一下本周的所得所想,">
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://skywonghz.github.io/2017/04/15/ionic混合开发（4.10-4.16）工作小结/"/>
+  <link rel="canonical" href="https://skywonghz.github.io/2017/04/15/ionic混合开发（4.10-4.16）工作小结/">
 
 
 
@@ -225,7 +225,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -233,7 +233,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -241,7 +241,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -375,9 +375,14 @@
 <li>对实名接口功能的理解：<br>(1)先做好实名注册页,再对下面的“认证”按钮加点击ng-click事件;<br>(2)通过jsopn前端向后台发起请求,包含三个条件token，身份证号码id_number，姓名name;<br>(3)发起请求成功状态下跳转页面,其它状态下一个处理机制;success判断；下面的error就是对发送请求但不成功下面的处理;<br>(4)完成核心功能后其它静态页面的修改,showalert在ionicpup下面加了个样式修改的方法,使在手机上看到的效果更好.</li>
 <li>通过这点发现对jsonp下的success和error还是不太熟悉,去进行深入理解.</li>
 </ol>
-<p><strong>做了扫码开锁和还车相关的功能逻辑</strong><br><figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-点击扫码事件--&gt;</span><br><span class="line">  $scope.barcodeScan=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;            </span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">	$cordovaBarcodeScanner</span><br><span class="line">      .scan()</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// Success! Barcode data is here</span></span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'Barcode data='</span>+<span class="string">"Result: "</span> + result.text + <span class="string">"\n"</span> +</span><br><span class="line">	                <span class="string">"Format: "</span> + result.format + <span class="string">"\n"</span> +</span><br><span class="line">	                <span class="string">"Cancelled: "</span> + result.cancelled);</span><br><span class="line">	    	<span class="keyword">try</span> &#123;</span><br><span class="line">	  			$cordovaToast.show(<span class="string">"Barcode data="</span>+<span class="string">"Result: "</span> + result.text + <span class="string">","</span> +</span><br><span class="line">		                <span class="string">"Format: "</span> + result.format + <span class="string">","</span> +</span><br><span class="line">		                <span class="string">"Cancelled: "</span> + result.cancelled, <span class="string">'long'</span>,<span class="string">'center'</span>);</span><br><span class="line">	  		&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">	  			<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">	  		&#125;</span><br><span class="line">	      &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">	    	  <span class="built_in">console</span>.log(<span class="string">'error='</span>+error);</span><br><span class="line">	      &#125;);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">		alert(<span class="string">'无法使用扫描功能！'</span>);</span><br><span class="line">	&#125;        </span><br><span class="line">      $http.jsonp(serverUrl+<span class="string">'/get/scanunlock?callback=JSON_CALLBACK&amp;ticket='</span>+$scope.ticket+<span class="string">'&amp;device_code=10000'</span>)</span><br><span class="line">      .success(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(res.ok)&#123;</span><br><span class="line">              $scope.myVal=<span class="literal">true</span>;</span><br><span class="line">              $scope.saomaShow=<span class="literal">true</span>;</span><br><span class="line">              <span class="built_in">console</span>.log(res);  </span><br><span class="line">              <span class="keyword">var</span> theTime = <span class="number">0</span>;<span class="comment">// 秒</span></span><br><span class="line">              <span class="keyword">var</span> theTime1 = <span class="number">0</span>;<span class="comment">// 分</span></span><br><span class="line">              <span class="keyword">var</span> theTime2 = <span class="number">0</span>;<span class="comment">// 小时</span></span><br><span class="line">              <span class="keyword">var</span> a,b,c,result;                </span><br><span class="line">              <span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                  theTime++;</span><br><span class="line">                  <span class="keyword">if</span>(theTime&gt;<span class="number">60</span>)&#123;</span><br><span class="line">                      theTime1=<span class="built_in">parseInt</span>(theTime/<span class="number">60</span>);</span><br><span class="line">                      theTime=<span class="built_in">parseInt</span>(theTime%<span class="number">60</span>);</span><br><span class="line">                      <span class="keyword">if</span>(theTime1&gt;<span class="number">60</span>)&#123;</span><br><span class="line">                          theTime2=<span class="built_in">parseInt</span>(theTime1/<span class="number">60</span>);</span><br><span class="line">                          theTime1=<span class="built_in">parseInt</span>(theTime1%<span class="number">60</span>);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      a=<span class="string">'0'</span>+theTime;</span><br><span class="line"></span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      a=theTime;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime1&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      b=<span class="string">'0'</span>+theTime1;</span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      b=theTime1;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime2&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      c=<span class="string">'0'</span>+theTime2;</span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      c=theTime2;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">var</span> result=(c+<span class="string">":"</span>+b+<span class="string">":"</span>+a);                    </span><br><span class="line">                  $scope.rideTime=result;</span><br><span class="line">              &#125;,<span class="number">1000</span>);</span><br><span class="line">              <span class="built_in">console</span>.log(result);             </span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              alert(<span class="string">'状态为201'</span>);</span><br><span class="line">              <span class="built_in">console</span>.log(res);                </span><br><span class="line">          &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      .error(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          alert(<span class="string">'请求失败'</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
+<p><strong>做了扫码开锁和还车相关的功能逻辑</strong></p>
+<figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-点击扫码事件--&gt;</span><br><span class="line">  $scope.barcodeScan=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;            </span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">	$cordovaBarcodeScanner</span><br><span class="line">      .scan()</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// Success! Barcode data is here</span></span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="string">'Barcode data='</span>+<span class="string">"Result: "</span> + result.text + <span class="string">"\n"</span> +</span><br><span class="line">	                <span class="string">"Format: "</span> + result.format + <span class="string">"\n"</span> +</span><br><span class="line">	                <span class="string">"Cancelled: "</span> + result.cancelled);</span><br><span class="line">	    	<span class="keyword">try</span> &#123;</span><br><span class="line">	  			$cordovaToast.show(<span class="string">"Barcode data="</span>+<span class="string">"Result: "</span> + result.text + <span class="string">","</span> +</span><br><span class="line">		                <span class="string">"Format: "</span> + result.format + <span class="string">","</span> +</span><br><span class="line">		                <span class="string">"Cancelled: "</span> + result.cancelled, <span class="string">'long'</span>,<span class="string">'center'</span>);</span><br><span class="line">	  		&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">	  			<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">	  		&#125;</span><br><span class="line">	      &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">	    	  <span class="built_in">console</span>.log(<span class="string">'error='</span>+error);</span><br><span class="line">	      &#125;);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">		alert(<span class="string">'无法使用扫描功能！'</span>);</span><br><span class="line">	&#125;        </span><br><span class="line">      $http.jsonp(serverUrl+<span class="string">'/get/scanunlock?callback=JSON_CALLBACK&amp;ticket='</span>+$scope.ticket+<span class="string">'&amp;device_code=10000'</span>)</span><br><span class="line">      .success(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(res.ok)&#123;</span><br><span class="line">              $scope.myVal=<span class="literal">true</span>;</span><br><span class="line">              $scope.saomaShow=<span class="literal">true</span>;</span><br><span class="line">              <span class="built_in">console</span>.log(res);  </span><br><span class="line">              <span class="keyword">var</span> theTime = <span class="number">0</span>;<span class="comment">// 秒</span></span><br><span class="line">              <span class="keyword">var</span> theTime1 = <span class="number">0</span>;<span class="comment">// 分</span></span><br><span class="line">              <span class="keyword">var</span> theTime2 = <span class="number">0</span>;<span class="comment">// 小时</span></span><br><span class="line">              <span class="keyword">var</span> a,b,c,result;                </span><br><span class="line">              <span class="keyword">var</span> timer=$interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                  theTime++;</span><br><span class="line">                  <span class="keyword">if</span>(theTime&gt;<span class="number">60</span>)&#123;</span><br><span class="line">                      theTime1=<span class="built_in">parseInt</span>(theTime/<span class="number">60</span>);</span><br><span class="line">                      theTime=<span class="built_in">parseInt</span>(theTime%<span class="number">60</span>);</span><br><span class="line">                      <span class="keyword">if</span>(theTime1&gt;<span class="number">60</span>)&#123;</span><br><span class="line">                          theTime2=<span class="built_in">parseInt</span>(theTime1/<span class="number">60</span>);</span><br><span class="line">                          theTime1=<span class="built_in">parseInt</span>(theTime1%<span class="number">60</span>);</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      a=<span class="string">'0'</span>+theTime;</span><br><span class="line"></span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      a=theTime;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime1&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      b=<span class="string">'0'</span>+theTime1;</span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      b=theTime1;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">if</span>(theTime2&lt;<span class="number">10</span>)&#123;</span><br><span class="line">                      c=<span class="string">'0'</span>+theTime2;</span><br><span class="line">                  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                      c=theTime2;</span><br><span class="line">                  &#125;</span><br><span class="line">                  <span class="keyword">var</span> result=(c+<span class="string">":"</span>+b+<span class="string">":"</span>+a);                    </span><br><span class="line">                  $scope.rideTime=result;</span><br><span class="line">              &#125;,<span class="number">1000</span>);</span><br><span class="line">              <span class="built_in">console</span>.log(result);             </span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">              alert(<span class="string">'状态为201'</span>);</span><br><span class="line">              <span class="built_in">console</span>.log(res);                </span><br><span class="line">          &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      .error(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          alert(<span class="string">'请求失败'</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<br>
+
 <figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 模拟结束骑行上锁结束骑行页面</span></span><br><span class="line"> $scope.rideEndingClick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     $http.jsonp(serverUrl+<span class="string">'/get/dropcar?callback=JSON_CALLBACK&amp;ticket='</span>+$scope.ticket+<span class="string">'&amp;device_code=10000'</span>)</span><br><span class="line">     .success(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(res.ok)&#123;</span><br><span class="line">             $state.go(<span class="string">'rideEnding'</span>);               </span><br><span class="line">             <span class="built_in">console</span>.log(res); </span><br><span class="line">             $scope.saomaDistance=res.data.distance+<span class="string">"km"</span>; </span><br><span class="line">             $scope.saomaSpeed=res.data.speed+<span class="string">"km/h"</span>;              </span><br><span class="line">         &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             alert(<span class="string">'状态为201'</span>);</span><br><span class="line">             <span class="built_in">console</span>.log(res);                </span><br><span class="line">         &#125;</span><br><span class="line">     &#125;)</span><br><span class="line">     .error(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         alert(<span class="string">'结束请求失败'</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">      <span class="comment">// $state.go('rideEnding');          </span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">// 扫码骑行切换按钮</span></span><br><span class="line"> $scope.saomaLockHide=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;        </span><br><span class="line">     $scope.saoma_hide=!$scope.saoma_hide;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
 <p>通过以上代码我知道核心点就是对ionic框架写业务代码的理解,现在回过头来复盘实际上就是做了扫码开锁,解锁两个任务,在扫码状态下加入了一个手机上扫二维码的方法,发起请求开锁,并在相应成功的状态下进入扫码的模态框</p>
 <p>业务图片如下：<br><img src="http://oo4wiq5wc.bkt.clouddn.com/%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" alt="1"><br><br></p>
 <p><img src="http://oo4wiq5wc.bkt.clouddn.com/%E6%AD%A3%E5%9C%A8%E9%AA%91%E8%A1%8C%20%E4%B8%8B%E6%8B%89.jpg" alt="此处输入图片的描述"><br><br></p>
@@ -411,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/09/hexo和github搭建静态博客/" rel="next" title="hexo和github搭建静态博客">
-                <i class="fa fa-chevron-left"></i> hexo和github搭建静态博客
+              <a href="/2017/04/15/ionic混合开发（4月上旬小结）/" rel="next" title="ionic混合开发（4月上旬小结）">
+                <i class="fa fa-chevron-left"></i> ionic混合开发（4月上旬小结）
               </a>
             
           </div>
@@ -421,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/15/ionic混合开发（4月上旬小结）/" rel="prev" title="ionic混合开发（4月上旬小结）">
-                ionic混合开发（4月上旬小结） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/15/对angular1.0中$scope.$watch() $interval()的一点理解/" rel="prev" title="对angular1.0中$scope.$watch() $interval()的一点理解">
+                对angular1.0中$scope.$watch() $interval()的一点理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -477,9 +482,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg"
-                alt="Sky Wang" />
+              <img class="site-author-image" itemprop="image" src="http://oo4wiq5wc.bkt.clouddn.com/IMG_20160216_161637_edit.jpg" alt="Sky Wang">
             
               <p class="site-author-name" itemprop="name">Sky Wang</p>
               <p class="site-description motion-element" itemprop="description">Ars longa, vita brevis, occasio praeceps, experimentum periculosum, iudicium difficile</p>
@@ -550,7 +553,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -564,7 +567,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
